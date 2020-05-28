@@ -1,0 +1,14 @@
+{
+  "/api/v1/currency-codes": {
+    "target": "http://localhost:8000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/api/v1/currency-converter": {
+    "target": "http://localhost:8100",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
