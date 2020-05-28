@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Sample response from the Currency Conversion Service
+----------------------------------------------------
+{
+   "amount":"10.0000",
+   "base_currency_code":"USD",
+   "base_currency_name":"US Dollar",
+   "rates":{
+      "INR":{
+         "currency_name":"Indian Rupee",
+         "rate":"75.7392",
+         "rate_for_amount":"757.3924"
+      }
+   },
+   "status":"success",
+   "updated_date":"2020-05-28"
+}
