@@ -23,12 +23,13 @@
     
 </div> -->
 
-
-<div class="container">
-    <b>
-        <p class="text-primary" style="text-align: center; color: wheat;">Currency Codes</p>
-    </b>
-    <!-- <table class="table table-sm">
+<!-- <div class="container">
+  <b>
+    <p class="text-primary" style="text-align: center; color: wheat;">
+      Currency Codes
+    </p>
+  </b> -->
+<!-- <table class="table table-sm">
         <tbody>
             <tr *ngFor="let currencyCode of currencyCodes">
                 <td style="text-align: right; border: 0px;">
@@ -37,9 +38,18 @@
             </tr>
         </tbody>
     </table> -->
-    <ul style="border: orangered; font-size: 14px;">
-        <li *ngFor="let currencyCode of currencyCodes" style="display: inline-flex; color: tomato;" >
-            <b>{{currencyCode.id}} </b>: {{currencyCode.code}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        </li>
-    </ul>
+<!-- </div> -->
+
+<div class="jumbotron pt-4">
+  <h1 class="display-5 text-center">Currency Codes</h1>
+  <div >
+    <table class="table table-bordered mt-4">
+      <tbody>
+         <tr *ngFor="let currencyCode of currencyCodes">
+          <td style="border:1px solid #424242">{{ currencyCode.code }}</td>
+          <td style="border:1px solid #424242"><span class="badge badge-success">{{ currencyCode.id }}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
