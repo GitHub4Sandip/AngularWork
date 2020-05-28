@@ -1,3 +1,4 @@
+<!-- 
 <div class="container">
     <b>
         <p class="text-primary" style="background-color: wheat;">Currency Conversion Calculator</p>
@@ -28,10 +29,82 @@
 
     </form>
 </div>
-<div *ngIf="conversion"></div>
-<table>
-    <tr>
 
-        <td>{{conversion | json }}</td>
+<table >
+    <tr>
+       <td>{{conversion.amount}}</td>
     </tr>
-</table>
+</table> -->
+
+<div class="jumbotron p-4 mb-3">
+  <h1 class="display-5 text-center">Currency Conversion Calculator</h1>
+  <div>
+    <form #conversionForm="ngForm">
+      <div class="row mt-5">
+        <div class="col-4">
+          <div class="form-group">
+            <label><b>From</b></label>
+            <input
+              #from
+              type="text"
+              class="form-control form-control-lg"
+              id="from"
+              name="from"
+              required
+              [(ngModel)]="model.from"
+              name="from"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label><b>To</b></label>
+            <input
+              #to
+              type="text"
+              class="form-control form-control-lg"
+              id="to"
+              name="to"
+              required
+              [(ngModel)]="model.to"
+              name="to"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label><b>Quantity</b></label>
+            <input
+              #quantity
+              type="text"
+              class="form-control form-control-lg"
+              id="quantity"
+              name="quantity"
+              required
+              [(ngModel)]="model.quantity"
+              name="quantity"
+            />
+          </div>
+        </div>
+        <div class="col-12 text-left">
+          <button
+            (click)="
+              calculateCurrencyConversion(from.value, to.value, quantity.value)
+            "
+            class="btn btn-success mt-3 btn-lg"
+            [disabled]="!conversionForm.form.valid"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="jumbotron p-4" *ngIf="conversion">
+  <h1 class="display-5 text-center">Result</h1>
+  <div class="text-center">
+    <span class="text-success" style="font-size: 2em">{{conversion.amount}}</span> in {{conversion.base_currency_code}} equals to <span class="text-success"  style="font-size: 2em">{{conversion.rates.INR.rate}}</span> {{conversion.rates.INR.currency_name}}
+  </div>
+</div>
