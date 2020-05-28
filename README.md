@@ -42,3 +42,24 @@ Sample response from the Currency Conversion Service
    "status":"success",
    "updated_date":"2020-05-28"
 }
+
+Sample Response from Currency Codes Service
+--------------------------------------------
+[
+   {
+      "id":"AUD",
+      "code":"Australian Dollar"
+   },
+   {
+      "id":"BGN",
+      "code":"Bulgarian Lev"
+   },
+   {
+      "id":"BRL",
+      "code":"Brazilian Real"
+   },
+   {
+      "id":"CAD",
+      "code":"Canadian Dollar"
+   }
+]
